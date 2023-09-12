@@ -5,10 +5,19 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "build": "tsc",
+    "serve": "vite preview",
+    "prepublish": "rm -rf ./dist && npm run build"
   },
+  "prepare": "npm run build",
   "license": "MIT",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasnetwork/solid-grecaptcha"
+  },
   "devDependencies": {
     "@types/grecaptcha": "^3.0.4",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
@@ -18,6 +27,7 @@
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0",
     "solid-devtools": "^0.27.3",
+    "solid-js": "^1.7.6",
     "typescript": "*",
     "vite": "^4.3.9",
     "vite-plugin-solid": "^2.7.0"
@@ -26,7 +36,6 @@
     "solid-js": "^1.7.6"
   },
   "dependencies": {
-    "@solid-primitives/script-loader": "^2.0.2",
-    "solid-js": "^1.7.6"
+    "@solid-primitives/script-loader": "^2.0.2"
   }
 }

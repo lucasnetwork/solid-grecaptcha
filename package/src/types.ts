@@ -50,25 +50,25 @@ export interface ConfigRender {
   /**
      * Callback function when greCaptcha challenge is displayed.
      */
-  'open-callback'?:  (() => void)
+  'open-callback'?: (() => void)
 
   /**
      * Callback function when greCaptcha challenge is hidden.
      */
-  'close-callback'?:  (() => void)
+  'close-callback'?: (() => void)
 
   /**
      * Callback function when greCaptcha challenge has expired.
      */
-  'chalexpired-callback'?:  (() => void)
+  'chalexpired-callback'?: (() => void)
 
   /**
      * Callback function when user's successful response has expired.
      */
-  'expired-callback'?:  (() => void)
+  'expired-callback'?: (() => void)
 
   /**
      * Callback function when greCaptcha has encountered an error.
      */
-  'error-callback':  () => void
+  'error-callback': () => void
 }

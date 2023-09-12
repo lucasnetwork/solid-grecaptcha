@@ -40,9 +40,9 @@ const GRECaptch: Component<GCaptchaProps> = (props) => {
       callback: handleSubmit
     }, props.config, {
       sitekey: props.siteKey,
-      tabindex: props.tabindex || 0,
-      theme: props.theme || 'light',
-      size: props.size || 'normal'
+      tabindex: props.tabindex ?? 0,
+      theme: props.theme ?? 'light',
+      size: props.size ?? 'normal'
     })
 
     const captchaId = grecaptcha.render(captchaRef, renderParams)

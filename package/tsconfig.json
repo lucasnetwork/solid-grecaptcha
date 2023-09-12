@@ -7,10 +7,13 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "preserve",
-    "declaration": true,
     "jsxImportSource": "solid-js",
-    "types": ["vite/client","@types/grecaptcha"],
-    "noEmit": true,
-    "isolatedModules": true
-  }
+    "types": ["@types/grecaptcha"],
+    "declaration": true,
+    "outDir": "./dist/source",
+    "declarationDir": "./dist/types",
+    "isolatedModules": true,
+    "allowJs": true
+  },
+  "include": ["src"]
 }
