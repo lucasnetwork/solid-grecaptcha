@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "declaration": true,
+    "jsxImportSource": "solid-js",
+    "types": ["vite/client","@types/grecaptcha"],
+    "noEmit": true,
+    "isolatedModules": true
+  }
+}
