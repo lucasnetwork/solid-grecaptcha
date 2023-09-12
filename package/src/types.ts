@@ -72,3 +72,15 @@ export interface ConfigRender {
      */
   'error-callback': () => void
 }
+
+export interface GCaptchaProps {
+  siteKey: string
+  theme?: 'dark' | 'light'
+  size?: 'compact' | 'normal'
+  config?: ConfigRender
+  tabindex?: number
+  onVerify?: (response: string) => void
+  handleIdCaptch?: (id: number) => void
+  onError?: () => void
+  onExpire?: () => void
+}

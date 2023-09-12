@@ -1,5 +1,5 @@
 import GRECaptch from './grecaptcha'
 
-export type { ConfigRender } from './types'
+export type { ConfigRender, GCaptchaProps } from './types'
 
 export default GRECaptch

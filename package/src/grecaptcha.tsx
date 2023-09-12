@@ -1,16 +1,8 @@
 import { type Component, createEffect } from 'solid-js'
 import { createScriptLoader } from '@solid-primitives/script-loader'
 import { generateScriptUrl } from './utils'
-import { type ConfigRender } from './types'
-interface GCaptchaProps {
-  siteKey: string
-  theme?: 'dark' | 'light'
-  size?: 'compact' | 'normal'
-  config?: ConfigRender
-  tabindex?: number
-  onVerify?: (response: string) => void
-  handleIdCaptch?: (id: number) => void
-}
+import { type GCaptchaProps, type ConfigRender } from './types'
+
 const GCAPTCHA_ONLOAD_FUNCTION_NAME = '__gCaptchaOnLoad__'
 declare global {
   interface Window {
@@ -25,18 +17,12 @@ const GRECaptch: Component<GCaptchaProps> = (props) => {
   const handleSubmit = (response: string) => {
     props.onVerify?.(response)
   }
-  const handleExpire = () => {
-    console.log('handleExpire')
-  }
-  const handleError = () => {
-    console.log('handleError')
-  }
 
   const renderCaptcha = () => {
     if (!captchaRef) return
     const renderParams: ConfigRender = Object.assign({
-      'error-callback': handleError,
-      'expired-callback': handleExpire,
+      'error-callback': props.onError,
+      'expired-callback': props.onExpire,
       callback: handleSubmit
     }, props.config, {
       sitekey: props.siteKey,
