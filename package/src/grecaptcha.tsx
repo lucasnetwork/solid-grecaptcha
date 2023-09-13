@@ -24,15 +24,14 @@ const GRECaptch: Component<GCaptchaProps> = (props) => {
       'error-callback': props.onError,
       'expired-callback': props.onExpire,
       callback: handleSubmit
-    }, props.config, {
+    }, {
       sitekey: props.siteKey,
       tabindex: props.tabindex ?? 0,
       theme: props.theme ?? 'light',
       size: props.size ?? 'normal'
     })
 
-    const captchaId = grecaptcha.render(captchaRef, renderParams)
-    props.handleIdCaptch?.(captchaId)
+    grecaptcha.render(captchaRef, renderParams)
   }
   const handleOnLoad = () => {
     renderCaptcha()
