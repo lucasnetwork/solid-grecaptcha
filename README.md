@@ -4,7 +4,7 @@
 
 
 
-<!-- ## Installation
+## Installation
 ```bash
 # npm
 npm install solid-grecaptcha
@@ -29,4 +29,4 @@ const App: Component = () => {
 };
 
 export default App;
-``` -->
+```

@@ -47,7 +47,7 @@ const GRECaptch: Component<GCaptchaProps> = (props) => {
     <form action="?" method="post">
       <div ref={captchaRef} id="html_element" />
       <br />
-      <input type="submit" value="Submit" />
+      <input hidden type="submit" value="Submit" />
     </form>
   )
 }

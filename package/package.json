@@ -1,6 +1,6 @@
 {
   "name": "solid-grecaptcha",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "",
   "scripts": {
     "start": "vite",
@@ -10,6 +10,7 @@
     "prepublish": "rm -rf ./dist && npm run build",
     "prepare": "npm run build"
   },
+  "keywords": ["solid js","grecaptcha"],
   "prepare": "npm run build",
   "license": "MIT",
   "main": "./dist/source/index.jsx",
