@@ -42,7 +42,7 @@ export default App;
 
 | Name | Values/Type | Required | Default | Description |
 | ---- | ----------- | -------- | ------- | ----------- |
-| `sitekey` | `string` | **Yes** | `-` | This is your sitekey, this allows you to load captcha. If you need a sitekey, please visit g-recaptcha, and sign up to get your sitekey. |
+| `sitekey` | `string` | **Yes** | `-` | This is your sitekey, this allows you to load captcha. If you need a sitekey, please visit [g-rcaptcha](https://www.google.com/recaptcha/) , and sign up to get your sitekey. |
 | `size` | `"normal" \| "compact"` | No | `"normal"` | This specifies the "size" of the component. g-recaptcha allows you to decide how big the component will appear on render, this always defaults to normal. |
 | `theme` | `"light" \| "dark"` | No | `"light"` | g-recaptcha supports both a light and dark theme. If no theme is inherently set, the captcha will always default to light. |
 | `tabindex` | `number` | No | `0` | Set the tabindex of the widget and popup. When appropriate, this can make navigation of your site more intuitive. |
