@@ -1,6 +1,6 @@
 export interface ConfigRender {
   /**
-     * Unique ID used for verifying a valid hCaptcha Client
+     * Unique ID used for verifying a valid g-recaptcha Client
      */
   sitekey: string
 
@@ -38,7 +38,7 @@ export interface ConfigRender {
 
 export interface GCaptchaProps {
   /**
-     * Unique ID used for verifying a valid hCaptcha Client
+     * Unique ID used for verifying a valid g-recaptcha Client
      */
   siteKey: string
   /**
