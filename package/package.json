@@ -1,6 +1,6 @@
 {
   "name": "solid-grecaptcha",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "scripts": {
     "start": "vite",
@@ -12,9 +12,8 @@
   },
   "prepare": "npm run build",
   "license": "MIT",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
+  "main": "./dist/source/index.jsx",
+  "types": "./dist/types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lucasnetwork/solid-grecaptcha"
