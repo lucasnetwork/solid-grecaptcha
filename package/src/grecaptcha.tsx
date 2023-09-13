@@ -11,7 +11,7 @@ declare global {
 }
 
 const GRECaptch: Component<GCaptchaProps> = (props) => {
-  let captchaRef = HTMLDivElement | undefined
+  let captchaRef: HTMLDivElement | undefined
   const isApiReady = () => typeof window.grecaptcha !== 'undefined'
   const scriptUrl = () => generateScriptUrl(GCAPTCHA_ONLOAD_FUNCTION_NAME)
   const handleSubmit = (response: string) => {
