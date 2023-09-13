@@ -29,9 +29,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "solid-devtools": "^0.27.3",
     "solid-js": "^1.7.6",
-    "typescript": "*",
-    "vite": "^4.3.9",
-    "vite-plugin-solid": "^2.7.0"
+    "typescript": "*"
   },
   "peerDependencies": {
     "solid-js": "^1.7.6"
