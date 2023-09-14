@@ -1,4 +1,4 @@
-import { type Component, createEffect } from 'solid-js'
+import { type Component, onMount, createSignal } from 'solid-js'
 import { createScriptLoader } from '@solid-primitives/script-loader'
 import { generateScriptUrl } from './utils'
 import { type GCaptchaProps, type ConfigRender } from './types'
@@ -14,6 +14,7 @@ const GRECaptch: Component<GCaptchaProps> = (props) => {
   let captchaRef: HTMLDivElement | undefined
   const isApiReady = () => typeof window.grecaptcha !== 'undefined'
   const scriptUrl = () => generateScriptUrl(GCAPTCHA_ONLOAD_FUNCTION_NAME)
+  const [, setCaptchaId] = createSignal<number>()
   const handleSubmit = (response: string) => {
     props.onVerify?.(response)
   }
@@ -31,15 +32,18 @@ const GRECaptch: Component<GCaptchaProps> = (props) => {
       size: props.size ?? 'normal'
     })
 
-    grecaptcha.render(captchaRef, renderParams)
+    const id = grecaptcha.render(captchaRef, renderParams)
+    setCaptchaId(id)
   }
   const handleOnLoad = () => {
     renderCaptcha()
   }
-  createEffect(() => {
+  onMount(() => {
     if (!isApiReady()) {
       window[GCAPTCHA_ONLOAD_FUNCTION_NAME] = handleOnLoad
       createScriptLoader({ src: scriptUrl() })
+    } else {
+      renderCaptcha()
     }
   })
   return (
